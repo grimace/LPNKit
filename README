@@ -1,0 +1,16 @@
+LPNKit is (read: will be) an Objective-c port of Google's JavaScript library
+for parsing, formatting, and validating international phone numbers.
+
+Google's libphonenumber project can be found here:
+http://code.google.com/p/libphonenumber/
+
+The goal of LPNKit is to maintain bug-for-bug compatibility with libphonenumber.
+
+There is a c++ version of libphonenumber, but LPNKit aims to stick to
+c and Objective-c and to avoid the need for additional dependencies.
+
+This project is very much a work-in-progress, and the api is subject
+to significant redesign. At this time, LPNKit should not be considered suitable
+for inclusion in any other projects, production or otherwise. ;-)
+
+
