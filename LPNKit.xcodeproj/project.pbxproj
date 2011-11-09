@@ -13,9 +13,9 @@
 		3EF2AD0A146A1CB50012AC16 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF2ACF8146A1CB50012AC16 /* Foundation.framework */; };
 		3EF2AD0D146A1CB50012AC16 /* libLPNKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF2ACF5146A1CB50012AC16 /* libLPNKit.a */; };
 		3EF2AD13146A1CB50012AC16 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3EF2AD11146A1CB50012AC16 /* InfoPlist.strings */; };
-		3EF2AD16146A1CB50012AC16 /* LPNKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF2AD15146A1CB50012AC16 /* LPNKitTests.m */; };
 		3EF2AD21146A20340012AC16 /* LPNPhoneNumber.h in Headers */ = {isa = PBXBuildFile; fileRef = 3EF2AD1F146A20340012AC16 /* LPNPhoneNumber.h */; };
 		3EF2AD22146A20340012AC16 /* LPNPhoneNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF2AD20146A20340012AC16 /* LPNPhoneNumber.m */; };
+		444037B7146A481F0028A134 /* LPNPhoneNumberTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 444037B6146A481F0028A134 /* LPNPhoneNumberTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,10 +37,10 @@
 		3EF2AD08146A1CB50012AC16 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		3EF2AD10146A1CB50012AC16 /* LPNKitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LPNKitTests-Info.plist"; sourceTree = "<group>"; };
 		3EF2AD12146A1CB50012AC16 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		3EF2AD14146A1CB50012AC16 /* LPNKitTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LPNKitTests.h; sourceTree = "<group>"; };
-		3EF2AD15146A1CB50012AC16 /* LPNKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LPNKitTests.m; sourceTree = "<group>"; };
 		3EF2AD1F146A20340012AC16 /* LPNPhoneNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPNPhoneNumber.h; sourceTree = "<group>"; };
 		3EF2AD20146A20340012AC16 /* LPNPhoneNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPNPhoneNumber.m; sourceTree = "<group>"; };
+		444037B5146A481F0028A134 /* LPNPhoneNumberTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPNPhoneNumberTests.h; sourceTree = "<group>"; };
+		444037B6146A481F0028A134 /* LPNPhoneNumberTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPNPhoneNumberTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,9 +116,9 @@
 		3EF2AD0E146A1CB50012AC16 /* LPNKitTests */ = {
 			isa = PBXGroup;
 			children = (
-				3EF2AD14146A1CB50012AC16 /* LPNKitTests.h */,
-				3EF2AD15146A1CB50012AC16 /* LPNKitTests.m */,
 				3EF2AD0F146A1CB50012AC16 /* Supporting Files */,
+				444037B5146A481F0028A134 /* LPNPhoneNumberTests.h */,
+				444037B6146A481F0028A134 /* LPNPhoneNumberTests.m */,
 			);
 			path = LPNKitTests;
 			sourceTree = "<group>";
@@ -249,7 +249,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3EF2AD16146A1CB50012AC16 /* LPNKitTests.m in Sources */,
+				444037B7146A481F0028A134 /* LPNPhoneNumberTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,6 +388,7 @@
 				3EF2AD1B146A1CB50012AC16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3EF2AD1C146A1CB50012AC16 /* Build configuration list for PBXNativeTarget "LPNKitTests" */ = {
 			isa = XCConfigurationList;
@@ -396,6 +397,7 @@
 				3EF2AD1E146A1CB50012AC16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

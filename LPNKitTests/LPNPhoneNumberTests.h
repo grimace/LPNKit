@@ -1,6 +1,6 @@
 //
-//  LPNKitTests.m
-//  LPNKitTests
+//  LPNPhoneNumberTests.h
+//  LPNKit
 //
 //  Created by Darryl Thomas on 11/8/11.
 //  Based on original code and protocol buffer:
@@ -19,27 +19,11 @@
 // limitations under the License.
 //
 
-#import "LPNKitTests.h"
+//  Logic unit tests contain unit test code that is designed to be linked into an independent test executable.
+//  See Also: http://developer.apple.com/iphone/library/documentation/Xcode/Conceptual/iphone_development/135-Unit_Testing_Applications/unit_testing_applications.html
 
-@implementation LPNKitTests
+#import <SenTestingKit/SenTestingKit.h>
 
-- (void)setUp
-{
-    [super setUp];
-    
-    // Set-up code here.
-}
-
-- (void)tearDown
-{
-    // Tear-down code here.
-    
-    [super tearDown];
-}
-
-- (void)testExample
-{
-    STFail(@"Unit tests are not implemented yet in LPNKitTests");
-}
+@interface LPNPhoneNumberTests : SenTestCase
 
 @end

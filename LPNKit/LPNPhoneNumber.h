@@ -30,24 +30,41 @@ typedef enum {
 
 @interface LPNPhoneNumber : NSObject
 {
-    @protected
+    @private
     uint32_t _countryCode;
     uint64_t _nationalNumber;
     NSString *_extension;
-    BOOL _hasItalianLeadingZero;
+    BOOL _italianLeadingZero;
     NSString *_rawInput;
     LPNPhoneNumberCountryCodeSource _countryCodeSource;
     NSString *_preferredDomesticCarrierCode;
     
+    struct {
+        BOOL hasCountryCode : 1;
+        BOOL hasNationalNumber : 1;
+        BOOL hasItalianLeadingZero : 1;
+        BOOL hasCountryCodeSource : 1;
+    } _stateFlags;
 }
 
-// TODO: initially defining as readonly until setters are needed
-@property (nonatomic, assign, readonly) uint32_t countryCode;
-@property (nonatomic, assign, readonly) uint64_t nationalNumber;
-@property (nonatomic, copy, readonly) NSString *extension;
+@property (nonatomic, assign) uint32_t countryCode;
+@property (nonatomic, assign, readonly) BOOL hasCountryCode;
+@property (nonatomic, assign) uint64_t nationalNumber;
+@property (nonatomic, assign, readonly) BOOL hasNationalNumber;
+@property (nonatomic, copy) NSString *extension;
+@property (nonatomic, assign, getter=isItalianLeadingZero) BOOL italianLeadingZero;
 @property (nonatomic, assign, readonly) BOOL hasItalianLeadingZero;
-@property (nonatomic, copy, readonly) NSString *rawInput;
-@property (nonatomic, assign, readonly) LPNPhoneNumberCountryCodeSource countryCodeSource;
-@property (nonatomic, copy, readonly) NSString *preferredDomesticCarrierCode;
+@property (nonatomic, copy) NSString *rawInput;
+@property (nonatomic, assign) LPNPhoneNumberCountryCodeSource countryCodeSource;
+@property (nonatomic, assign, readonly) BOOL hasCountryCodeSource;
+@property (nonatomic, copy) NSString *preferredDomesticCarrierCode;
+
+- (void)clear;
+- (void)clearCountryCode;
+- (void)clearNationalNumber;
+- (void)clearItalianLeadingZero;
+- (void)clearCountryCodeSource;
+
+- (void)mergeFromPhoneNumber:(LPNPhoneNumber *)otherPhoneNumber;
 
 @end
