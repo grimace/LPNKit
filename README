@@ -1,4 +1,4 @@
-LPNKit is (read: will be) an Objective-c port of Google's JavaScript library
+LPNKit is (read: will be) an Objective-c port of Google's library
 for parsing, formatting, and validating international phone numbers.
 
 Google's libphonenumber project can be found here:
