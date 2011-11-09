@@ -43,6 +43,16 @@
 }
 
 
+- (void)dealloc
+{
+    [_extension release];
+    [_rawInput release];
+    [_preferredDomesticCarrierCode release];
+    
+    [super dealloc];
+}
+
+
 - (void)setCountryCode:(uint32_t)countryCode
 {
     [self willChangeValueForKey:@"countryCode"];
