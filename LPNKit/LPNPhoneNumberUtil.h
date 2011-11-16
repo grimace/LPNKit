@@ -20,7 +20,30 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "LPNPhoneNumber.h"
+
+@class LPNPhoneMetadata;
 
 @interface LPNPhoneNumberUtil : NSObject
+
+@property (nonatomic, copy, readonly) NSArray *supportedRegions;
+
++(id)sharedPhoneNumberUtil;
++(void)resetSharedPhoneNumberUtil;
+
+- (LPNPhoneMetadata *)metadataForRegion:(NSString *)regionCode;
+- (BOOL)isLeadingZeroPossibleForCountryCallingCode:(NSUInteger)countryCallingCode;
+- (NSUInteger)lengthOfGeographicalAreaCodeForPhoneNumber:(LPNPhoneNumber *)phoneNumber;
+- (NSUInteger)lengthOfNationalDestinationCodeForPhoneNumber:(LPNPhoneNumber *)phoneNumber;
+- (NSString *)nationalSignificantNumberForPhoneNumber:(LPNPhoneNumber *)phoneNumber;
+- (LPNPhoneNumber *)examplePhoneNumberForRegion:(NSString *)regionCode;
+- (LPNPhoneNumber *)examplePhoneNumberOfType:(LPNPhoneNumberType)numberType forRegion:(NSString *)regionCode;
+- (NSString *)stringByConvertingAlphaCharactersInNumberString:(NSString *)numberString;
+- (NSString *)normalizedString:(NSString *)numberString;
+- (NSString *)normalizedStringWithDigitsOnly:(NSString *)numberString;
+- (NSString *)normalizedString:(NSString *)numberString keepNonDigits:(BOOL)keepNonDigits;
+- (NSString *)stringWithPhoneNumber:(LPNPhoneNumber *)phoneNumber format:(LPNPhoneNumberFormat)format;
+- (NSString *)outOfCountryCallingNumberStringWithPhoneNumber:(LPNPhoneNumber *)phoneNumber region:(NSString *)regionCode;
+- (NSString *)outOfCountryCallingNumberStringWithPhoneNumber:(LPNPhoneNumber *)phoneNumber region:(NSString *)regionCode keepAlphaCharacters:(BOOL)keepAlpha;
 
 @end

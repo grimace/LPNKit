@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E7FC8411472F1AC0004BA18 /* LPNPhoneMetadata.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E7FC83F1472F1AC0004BA18 /* LPNPhoneMetadata.h */; };
+		3E7FC8421472F1AC0004BA18 /* LPNPhoneMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7FC8401472F1AC0004BA18 /* LPNPhoneMetadata.m */; };
+		3E7FC8471472F87E0004BA18 /* LPNNumberFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7FC8451472F87E0004BA18 /* LPNNumberFormat.m */; };
+		3E7FC84C1472FD860004BA18 /* LPNNumberFormat.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E7FC8441472F87E0004BA18 /* LPNNumberFormat.h */; };
+		3E7FC84F1472FF480004BA18 /* LPNPhoneNumberDescription.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E7FC84D1472FF480004BA18 /* LPNPhoneNumberDescription.h */; };
+		3E7FC8501472FF480004BA18 /* LPNPhoneNumberDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7FC84E1472FF480004BA18 /* LPNPhoneNumberDescription.m */; };
 		3EF2ACF9146A1CB50012AC16 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF2ACF8146A1CB50012AC16 /* Foundation.framework */; };
 		3EF2AD07146A1CB50012AC16 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF2AD06146A1CB50012AC16 /* SenTestingKit.framework */; };
 		3EF2AD09146A1CB50012AC16 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF2AD08146A1CB50012AC16 /* UIKit.framework */; };
@@ -35,6 +41,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3E7FC83F1472F1AC0004BA18 /* LPNPhoneMetadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPNPhoneMetadata.h; sourceTree = "<group>"; };
+		3E7FC8401472F1AC0004BA18 /* LPNPhoneMetadata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPNPhoneMetadata.m; sourceTree = "<group>"; };
+		3E7FC8441472F87E0004BA18 /* LPNNumberFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LPNNumberFormat.h; path = LPNKit/LPNNumberFormat.h; sourceTree = SOURCE_ROOT; };
+		3E7FC8451472F87E0004BA18 /* LPNNumberFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LPNNumberFormat.m; path = LPNKit/LPNNumberFormat.m; sourceTree = SOURCE_ROOT; };
+		3E7FC84D1472FF480004BA18 /* LPNPhoneNumberDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPNPhoneNumberDescription.h; sourceTree = "<group>"; };
+		3E7FC84E1472FF480004BA18 /* LPNPhoneNumberDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPNPhoneNumberDescription.m; sourceTree = "<group>"; };
 		3EF2ACF5146A1CB50012AC16 /* libLPNKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLPNKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EF2ACF8146A1CB50012AC16 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3EF2ACFC146A1CB50012AC16 /* LPNKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LPNKit-Prefix.pch"; sourceTree = "<group>"; };
@@ -119,6 +131,12 @@
 				444037C1146A6E510028A134 /* LPNPhoneNumberMatch.m */,
 				3EF2AD2D146B092B0012AC16 /* LPNPhoneNumberUtil.h */,
 				3EF2AD2E146B092B0012AC16 /* LPNPhoneNumberUtil.m */,
+				3E7FC83F1472F1AC0004BA18 /* LPNPhoneMetadata.h */,
+				3E7FC8401472F1AC0004BA18 /* LPNPhoneMetadata.m */,
+				3E7FC8441472F87E0004BA18 /* LPNNumberFormat.h */,
+				3E7FC8451472F87E0004BA18 /* LPNNumberFormat.m */,
+				3E7FC84D1472FF480004BA18 /* LPNPhoneNumberDescription.h */,
+				3E7FC84E1472FF480004BA18 /* LPNPhoneNumberDescription.m */,
 			);
 			path = LPNKit;
 			sourceTree = "<group>";
@@ -164,6 +182,9 @@
 				3EF2AD21146A20340012AC16 /* LPNPhoneNumber.h in Headers */,
 				444037C2146A6E510028A134 /* LPNPhoneNumberMatch.h in Headers */,
 				3EF2AD2F146B092B0012AC16 /* LPNPhoneNumberUtil.h in Headers */,
+				3E7FC8411472F1AC0004BA18 /* LPNPhoneMetadata.h in Headers */,
+				3E7FC84C1472FD860004BA18 /* LPNNumberFormat.h in Headers */,
+				3E7FC84F1472FF480004BA18 /* LPNPhoneNumberDescription.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +289,9 @@
 				3EF2AD22146A20340012AC16 /* LPNPhoneNumber.m in Sources */,
 				444037C3146A6E510028A134 /* LPNPhoneNumberMatch.m in Sources */,
 				3EF2AD30146B092B0012AC16 /* LPNPhoneNumberUtil.m in Sources */,
+				3E7FC8421472F1AC0004BA18 /* LPNPhoneMetadata.m in Sources */,
+				3E7FC8471472F87E0004BA18 /* LPNNumberFormat.m in Sources */,
+				3E7FC8501472FF480004BA18 /* LPNPhoneNumberDescription.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

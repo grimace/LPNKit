@@ -21,6 +21,109 @@
 
 #import "LPNPhoneNumberUtil.h"
 
+static LPNPhoneNumberUtil *sharedPhoneNumberUtil = nil;
+
 @implementation LPNPhoneNumberUtil
+
+@synthesize supportedRegions=_supportedRegions;
+
++ (id)sharedPhoneNumberUtil
+{
+    if (!sharedPhoneNumberUtil) {
+        sharedPhoneNumberUtil = [[LPNPhoneNumberUtil alloc] init];
+    }
+    
+    return sharedPhoneNumberUtil;
+}
+
+
++ (void)resetSharedPhoneNumberUtil
+{
+    [sharedPhoneNumberUtil release], sharedPhoneNumberUtil = nil;
+}
+
+
+- (LPNPhoneMetadata *)metadataForRegion:(NSString *)regionCode
+{
+    return nil;
+}
+
+
+- (BOOL)isLeadingZeroPossibleForCountryCallingCode:(NSUInteger)countryCallingCode
+{
+    return NO;
+}
+
+
+- (NSUInteger)lengthOfGeographicalAreaCodeForPhoneNumber:(id)phoneNumber
+{
+    return NSUIntegerMax;
+}
+
+
+- (NSUInteger)lengthOfNationalDestinationCodeForPhoneNumber:(LPNPhoneNumber *)phoneNumber
+{
+    return NSUIntegerMax;
+}
+
+
+- (NSString *)nationalSignificantNumberForPhoneNumber:(LPNPhoneNumber *)phoneNumber
+{
+    return nil;
+}
+
+
+- (LPNPhoneNumber *)examplePhoneNumberForRegion:(NSString *)regionCode
+{
+    return [self examplePhoneNumberOfType:LPNPhoneNumberFixedLineType forRegion:regionCode];
+}
+
+
+- (LPNPhoneNumber *)examplePhoneNumberOfType:(LPNPhoneNumberType)numberType forRegion:(NSString *)regionCode
+{
+    return nil;
+}
+
+
+- (NSString *)stringByConvertingAlphaCharactersInNumberString:(NSString *)numberString
+{
+    return nil;
+}
+
+
+- (NSString *)normalizedString:(NSString *)numberString
+{
+    return nil;
+}
+
+
+- (NSString *)normalizedStringWithDigitsOnly:(NSString *)numberString
+{
+    return [self normalizedString:numberString keepNonDigits:NO];
+}
+
+
+- (NSString *)normalizedString:(NSString *)numberString keepNonDigits:(BOOL)keepNonDigits
+{
+    return nil;
+}
+
+
+- (NSString *)stringWithPhoneNumber:(LPNPhoneNumber *)phoneNumber format:(LPNPhoneNumberFormat)format
+{
+    return nil;
+}
+
+
+- (NSString *)outOfCountryCallingNumberStringWithPhoneNumber:(LPNPhoneNumber *)phoneNumber region:(NSString *)regionCode
+{
+    return [self outOfCountryCallingNumberStringWithPhoneNumber:phoneNumber region:regionCode keepAlphaCharacters:NO];
+}
+
+
+- (NSString *)outOfCountryCallingNumberStringWithPhoneNumber:(LPNPhoneNumber *)phoneNumber region:(NSString *)regionCode keepAlphaCharacters:(BOOL)keepAlpha
+{
+    return nil;
+}
 
 @end

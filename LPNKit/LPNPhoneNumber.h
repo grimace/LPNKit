@@ -28,6 +28,30 @@ typedef enum {
     LPNPhoneNumberCountryCodeFromDefaultCountrySource,
 } LPNPhoneNumberCountryCodeSource;
 
+
+typedef enum {
+    LPNPhoneNumberFixedLineType,
+    LPNPhoneNumberMobileType,
+    LPNPhoneNumberFixedLineOrMobileType,
+    LPNPhoneNumberTollfreeType,
+    LPNPhoneNumberPremiumRateType,
+    LPNPhoneNumberSharedCostType,
+    LPNPhoneNumberVOIPType,
+    LPNPhoneNumberPersonalNumberType,
+    LPNPhoneNumberPagerType,
+    LPNPhoneNumberUANType,
+    LPNPhoneNumberUnknownType,
+} LPNPhoneNumberType;
+
+
+typedef enum {
+    LPNPhoneNumberE164Format,
+    LPNPhoneNumberInternationalFormat,
+    LPNPhoneNumberNationalFormat,
+    LPNPhoneNumberRFC3966Format,
+} LPNPhoneNumberFormat;
+
+
 @interface LPNPhoneNumber : NSObject
 {
     @private
@@ -46,6 +70,7 @@ typedef enum {
         BOOL hasCountryCodeSource : 1;
     } _stateFlags;
 }
+
 
 @property (nonatomic, assign) uint32_t countryCode;
 @property (nonatomic, assign, readonly) BOOL hasCountryCode;
